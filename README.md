@@ -1,1 +1,3 @@
-# formationReact
+# React + Vite
+
+Formation react
