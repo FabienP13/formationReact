@@ -22,8 +22,8 @@ function App() {
   return (
     <>
       <p>Age de {person.firstName} {person.lastName} : {person.age}</p>
-      <button onClick={incrementAge}>Gagner une année</button>
-      <button onClick={incrementCount}>Incrémenter {count}</button>
+      <button className="bg-blue-400 rounded-md p-1 m-1 cursor-pointer" onClick={incrementAge}>Gagner une année</button>
+      <button className="bg-green-400 rounded-md p-1 m-1 cursor-pointer" onClick={incrementCount}>Incrémenter {count}</button>
     </>
   );
 }
