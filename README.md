@@ -1,3 +1,3 @@
 # React + Vite
 
-Formation react
+Formation React
