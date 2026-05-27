@@ -5,12 +5,16 @@ import App from './App.jsx'
 import Formulaire from './components/Formulaire.jsx'
 import FluxData from './components/FluxData.jsx'
 import ProductList from './components/ProductList.jsx'
+import HookUseEffect from './components/HookUseEffect.jsx'
+import HookUseEffectTP from './components/HookUseEffectTP.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App />
     <Formulaire /> */}
     {/* <FluxData /> */}
-    <ProductList />
+    {/* <ProductList /> */}
+    {/* <HookUseEffect /> */}
+    <HookUseEffectTP />
   </StrictMode>,
 )
