@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CGUCheckbox from "./CGUCheckbox";
+import CGUCheckbox from "./forms/CGUCheckbox";
 
 function FluxData() {
 
