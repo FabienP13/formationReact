@@ -13,11 +13,16 @@ const PRODUCTS = [
 function ProductList() {
     const [showStockedOnly, setShowStockedOnly] = useState(false);
     const [search, setSearch] = useState('');
+    const [priceRange, setPriceRange] = useState(5);
+    
     const visibleProducts = PRODUCTS.filter(product => {
         if(showStockedOnly && !product.stocked){
             return false;
         }
         if(search && !product.name.toLowerCase().includes(search.toLowerCase())){
+            return false;
+        }
+        if(priceRange && product.price > `$${priceRange}`){
             return false;
         }
         return true;
@@ -28,7 +33,9 @@ function ProductList() {
         search={search}
         onSearchChange={setSearch} 
         showStockedOnly={showStockedOnly} 
-        onStockedOnlyChange={setShowStockedOnly} />
+        onStockedOnlyChange={setShowStockedOnly} 
+        priceRange={priceRange}
+        onPriceRangeChange={setPriceRange} />
         <ProductTable products={visibleProducts} />
     </div>
 }
