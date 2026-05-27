@@ -7,6 +7,7 @@ import FluxData from './components/FluxData.jsx'
 import ProductList from './components/ProductList.jsx'
 import HookUseEffect from './components/HookUseEffect.jsx'
 import HookUseEffectTP from './components/HookUseEffectTP.jsx'
+import HookUseMemo from './components/HookUseMemo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
     {/* <FluxData /> */}
     {/* <ProductList /> */}
     {/* <HookUseEffect /> */}
-    <HookUseEffectTP />
+    {/* <HookUseEffectTP /> */}
+    <HookUseMemo />
   </StrictMode>,
 )
