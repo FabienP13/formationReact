@@ -8,6 +8,8 @@ import ProductList from './components/ProductList.jsx'
 import HookUseEffect from './components/HookUseEffect.jsx'
 import HookUseEffectTP from './components/HookUseEffectTP.jsx'
 import HookUseMemo from './components/HookUseMemo.jsx'
+import HookUseRef from './components/HookUseRef.jsx'
+import HookUseRefv2 from './components/HookUseRefv2.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,6 +19,8 @@ createRoot(document.getElementById('root')).render(
     {/* <ProductList /> */}
     {/* <HookUseEffect /> */}
     {/* <HookUseEffectTP /> */}
-    <HookUseMemo />
+    {/* <HookUseMemo /> */}
+    {/* <HookUseRef /> */}
+    <HookUseRefv2 />
   </StrictMode>,
 )
