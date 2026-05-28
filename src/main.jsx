@@ -10,6 +10,7 @@ import HookUseEffectTP from './components/HookUseEffectTP.jsx'
 import HookUseMemo from './components/HookUseMemo.jsx'
 import HookUseRef from './components/HookUseRef.jsx'
 import HookUseRefv2 from './components/HookUseRefv2.jsx'
+import HookPersonnalise from './components/HookPersonnalise.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
     {/* <HookUseEffectTP /> */}
     {/* <HookUseMemo /> */}
     {/* <HookUseRef /> */}
-    <HookUseRefv2 />
+    {/* <HookUseRefv2 /> */}
+    <HookPersonnalise />
   </StrictMode>,
 )
