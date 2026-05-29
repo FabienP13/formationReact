@@ -12,19 +12,21 @@ import HookUseRef from './components/HookUseRef.jsx'
 import HookUseRefv2 from './components/HookUseRefv2.jsx'
 import HookPersonnalise from './components/HookPersonnalise.jsx'
 import MemoisationUseCallback from './components/MemoisationUseCallback.jsx'
+import Portails from './components/Portails.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App />
     <Formulaire /> */}
     {/* <FluxData /> */}
-    {/* <ProductList /> */}
+    <ProductList />
     {/* <HookUseEffect /> */}
     {/* <HookUseEffectTP /> */}
     {/* <HookUseMemo /> */}
     {/* <HookUseRef /> */}
     {/* <HookUseRefv2 /> */}
     {/* <HookPersonnalise /> */}
-    <MemoisationUseCallback />
+    {/* <MemoisationUseCallback /> */}
+    {/* <Portails/> */}
   </StrictMode>,
 )
