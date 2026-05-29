@@ -11,6 +11,7 @@ import HookUseMemo from './components/HookUseMemo.jsx'
 import HookUseRef from './components/HookUseRef.jsx'
 import HookUseRefv2 from './components/HookUseRefv2.jsx'
 import HookPersonnalise from './components/HookPersonnalise.jsx'
+import MemoisationUseCallback from './components/MemoisationUseCallback.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
     {/* <HookUseMemo /> */}
     {/* <HookUseRef /> */}
     {/* <HookUseRefv2 /> */}
-    <HookPersonnalise />
+    {/* <HookPersonnalise /> */}
+    <MemoisationUseCallback />
   </StrictMode>,
 )
