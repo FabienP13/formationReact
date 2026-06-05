@@ -11,6 +11,9 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.3.0
         version: 4.3.0(vite@8.0.14(jiti@2.7.0))
+      '@tailwindplus/elements':
+        specifier: ^1.0.22
+        version: 1.0.22
       react:
         specifier: ^19.2.6
         version: 19.2.6
@@ -395,6 +398,9 @@ packages:
     resolution: {integrity: sha512-t6J3OrB5Fc0ExuhohouH0fWUGMYL6PTLhW+E7zIk/pdbnJARZDCwjBznFnkh5ynRnIRSI4YjtTH0t6USjJISrw==}
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
+
+  '@tailwindplus/elements@1.0.22':
+    resolution: {integrity: sha512-rpUVblTefHInmbanTreDqxkjGYV+S44EOIJS1UtyvY1+tn5PbdOkUkWar8cjkEZpCDPAXbswtF0tuxEkX3jk0g==}
 
   '@tybys/wasm-util@0.10.2':
     resolution: {integrity: sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg==}
@@ -1253,6 +1259,8 @@ snapshots:
       '@tailwindcss/oxide': 4.3.0
       tailwindcss: 4.3.0
       vite: 8.0.14(jiti@2.7.0)
+
+  '@tailwindplus/elements@1.0.22': {}
 
   '@tybys/wasm-util@0.10.2':
     dependencies:

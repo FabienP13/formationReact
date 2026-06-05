@@ -1,4 +1,7 @@
+import { useRef } from "react";
 import { useEffect, useState } from "react";
+import { useRefSync } from "./useRefSync";
+
 
 /**
  * Description placeholder
@@ -7,31 +10,32 @@ import { useEffect, useState } from "react";
  * @param {string} url 
  * @param {FetchEventInit} options 
  */
-export function useFetch(url, options = {}) {
+export function useFetch(url, options) {
 
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState(null);
-    const [errors, setErrors] = useState(null);
+    const [error, setError] = useState(null);
+    const optionsRef = useRefSync(options);
 
     useEffect(() => {
         fetch(url, {
-            ...options,
+            ...optionsRef.current,
             headers: {
                 'Accept': 'application/json, charset=UTF-8',
-                ...options.headers,   
+                ...optionsRef.current?.headers,   
             }
         }).then(res => res.json()).then(data => {
             setLoading(false);
             setData(data);
         }).catch((e) => {
-            setErrors(e);
+            setError(e);
         }).finally(() => {
             setLoading(false);
         });
-    }, []);
+    }, [url]);
 
     return { 
-        loading,data,errors
+        loading,data,error
     }
 
 }

@@ -1,31 +1,34 @@
 import { useState } from "react";
-
-
+import { useHashNavigation } from "./hooks/useHashNavigation";
+import Contact from "./pages/Contact";
+import Single from "./pages/Single";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Header from "./components/Header";
 
 function App() {
-  //HOOK : Ne pas faire de condition sur les hooks, ils doivent être appelés à chaque rendu du composant dans le même ordre
-  const [count, setCount] = useState(0);
-  const [person, setPerson] = useState({
-    firstName: "John",
-    lastName: "Doe",
-    age: 18,
-  });
-
-  const incrementAge = () => {
-    // setCount(count + 1);
-    setPerson((person) => ({ ...person, age: person.age + 1 }));
-  }
-   const incrementCount= () => {
-    setCount(count + 1);
-    
-  }
+  const { page, param } = useHashNavigation();
+  const pageContent = getPageContent(page,param);
   return (
     <>
-      <p>Age de {person.firstName} {person.lastName} : {person.age}</p>
-      <button className="bg-blue-400 rounded-md p-1 m-1 cursor-pointer" onClick={incrementAge}>Gagner une année</button>
-      <button className="bg-green-400 rounded-md p-1 m-1 cursor-pointer" onClick={incrementCount}>Incrémenter {count}</button>
+      <Header page={page} />
+      <div className="container mx-auto my-4 px-10">
+        {pageContent}
+      </div>
     </>
   );
+}
+
+function getPageContent(page,param) {
+  if(page === "home") {
+    return <Home/>;
+  } else if(page === "post") {
+    return <Single postId={param} />;
+  } else if(page === "contact") {
+    return <Contact />;
+  } else {
+    return <NotFound page={page} />
+  }
 }
 
 export default App;
