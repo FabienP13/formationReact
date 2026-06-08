@@ -9,7 +9,7 @@ export function Alert({type = 'info', children}) {
 
   return (
     <div
-      className={`border w-fit m-auto px-4 py-3 rounded relative ${getAlertType(type)}`}
+      className={`border w-fit m-auto px-4 my-3 py-3 rounded relative ${getAlertType(type)}`}
       role="alert"
     >
       <span className="block sm:inline">{children}</span>

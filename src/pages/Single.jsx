@@ -5,12 +5,15 @@ import { Modal } from "../components/Modal";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { useFetch } from "../hooks/useFetch";
 import { useToggle } from "../hooks/useToggle";
+import { EditPostModal } from "./Single/EditPostModal";
 
 function Single({ postId }) {
+  
   const {
     loading,
     data: post,
     error,
+    setData
   } = useFetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
 
   useDocumentTitle(`Article - ${post?.title}`);
@@ -24,6 +27,16 @@ function Single({ postId }) {
     return <Alert type="danger">{error.toString()}</Alert>;
   }
 
+  throw new Error("Test error boundary");
+
+  const handleSave = (data) => {
+    setData({
+      ...post,
+      ...data
+    });
+    toggleEditing();
+  }
+
   return (
     <div className="flex flex-col items-start">
       <h1 className="mb-3 text-3xl font-bold">{post?.title}</h1>
@@ -33,7 +46,10 @@ function Single({ postId }) {
         className="my-3 rounded-xl"
       />
       <p className='mb-5'> {post?.body}</p>
-      {isEditing && <Modal> Edition de l'article </Modal>}
+      {isEditing && <EditPostModal 
+        post={post} 
+        onClose={toggleEditing} 
+        onSave={handleSave}/>}
       <Button variant="warning" onClick={toggleEditing}>
         Editer l'article
       </Button>

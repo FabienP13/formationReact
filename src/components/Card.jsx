@@ -21,7 +21,7 @@ export function Card({
 
     const showButton = !!(href && buttonLabel);
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden shadow-xl">
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-xl pb-4">
       {image && <img
         className="w-full"
         src={image}
@@ -32,8 +32,8 @@ export function Card({
           {description}
         </p>}
       </div>
-      <div className="px-6 pt-4 pb-2">
-        {showButton && <Button href={href} variant='primary' className="inline-block bg-indigo-400 rounded-lg p-2 m-1 cursor-pointer">
+      <div className="px-6 pt-4 pb-2 ">
+        {showButton && <Button href={href} variant='primary' command="show-modal" commandfor="dialog" className="rounded-md  px-2.5 py-1.5 text-sm font-semibold text-white inset-ring inset-ring-white/5 ">
           {buttonLabel}
         </Button> }
         

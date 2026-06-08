@@ -3,10 +3,11 @@
  * @export
  * @param {"danger","warning","info","success"} variant 
  */
-export function Button({ variant = 'info', ...props}) {
+export function Button({ variant = 'info', className ="", ...props}) {
+   
     const newProps = {
         ...props,
-        className: `${getButtonVariant(variant)} text-white font-bold py-2 px-4 rounded hover:cursor-pointer`
+        className: `text-white font-bold py-2 px-4 rounded hover:cursor-pointer w-fit ${className} ${getButtonVariant(variant)} `
     }
 
     if (props.href) {
@@ -20,7 +21,7 @@ function getButtonVariant(variant) {
         return "bg-red-500 hover:bg-red-700";
     }
     if(variant === "warning") {
-        return "bg-yellow-500 hover:bg-yellow-700";
+        return "bg-yellow-500 hover:bg-yellow-400";
     }
     if(variant === "info") {
         return "bg-blue-500 hover:bg-blue-700";
