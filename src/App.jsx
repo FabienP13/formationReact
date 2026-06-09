@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { useHashNavigation } from "./hooks/useHashNavigation";
 import Contact from "./pages/Contact";
-import Single from "./pages/Single";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
@@ -32,7 +31,10 @@ function getPageContent(page,param) {
   if(page === "home") {
     return <Home/>;
   } else if(page === "post") {
-    return <Single postId={param} />;
+    const SingleLazy  = lazy(()=> import("./pages/Single"));
+    return <Suspense fallback={<div>Chargement des composants en cours</div>}>
+      <SingleLazy postId={param} />
+      </Suspense>;
   } else if(page === "contact") {
     return <Contact />;
   } else {

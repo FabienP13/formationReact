@@ -27,7 +27,6 @@ function Single({ postId }) {
     return <Alert type="danger">{error.toString()}</Alert>;
   }
 
-  throw new Error("Test error boundary");
 
   const handleSave = (data) => {
     setData({
