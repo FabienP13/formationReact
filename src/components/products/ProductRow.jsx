@@ -7,7 +7,6 @@ import { useEffect } from "react";
  */
 function ProductRow({product}) {
 
-    throw new Error("erreur");
     
 
     const style = product.stocked ? 'undefined' : 'text-red-400';

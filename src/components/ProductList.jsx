@@ -40,7 +40,7 @@ function ProductList() {
       />
       <ErrorBoundary 
         FallbackComponent={AlertError}
-        onReset={() => console.log('reset')}
+        
       >
         <ProductTable products={visibleProducts} />
       </ErrorBoundary>
