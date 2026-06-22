@@ -8,6 +8,7 @@ import ProductList from './components/ProductList.jsx'
 import HookUseEffect from './components/HookUseEffect.jsx'
 import HookUseEffectTP from './components/HookUseEffectTP.jsx'
 import HookUseMemo from './components/HookUseMemo.jsx'
+import UseReducer from './components/UseReducer.jsx'
 import HookUseRef from './components/HookUseRef.jsx'
 import HookUseRefv2 from './components/HookUseRefv2.jsx'
 import HookPersonnalise from './components/HookPersonnalise.jsx'
@@ -19,7 +20,8 @@ createRoot(document.getElementById('root')).render(
     {/* <App />
     <Formulaire /> */}
     {/* <FluxData /> */}
-    <ProductList />
+    {/* <ProductList /> */}
+    <UseReducer />
     {/* <HookUseEffect /> */}
     {/* <HookUseEffectTP /> */}
     {/* <HookUseMemo /> */}
