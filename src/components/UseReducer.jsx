@@ -20,15 +20,18 @@ function UseReducer() {
               <Input
                 type="checkbox"
                 onChange={() =>toggleTodo(todo)}
+                id={todo.name}
+                name={todo.name}
                 checked={todo.checked}
               />
-              <span
+              <label
+                htmlFor={todo.name}
                 className={`${
                   todo.checked ? "line-through text-gray-400" : "text-gray-800"
                 }`}
               >
                 {todo.name}
-              </span>
+              </label>
             </div>
 
             <button

@@ -8,11 +8,13 @@
  * @param {(s: string) => void } props.onChange 
  * @param {import("react").RefObject<HTMLInputElement>} props.ref 
  */
-function Input({placeholder,value,type,onChange}) {
+function Input({placeholder,id,value,type,name,onChange}) {
     return <>      
           <input
             type={type}
+            id={id}
             placeholder={placeholder}
+            name={name}
             value={value}
             onChange={(e) => onChange(e.target.value)}
             className="block min-w-0 grow border border-gray-500 rounded-lg  py-1.5 p-2 text-base text-gray-900 placeholder:text-gray-500 focus:outline-indigo-500 sm:text-sm/6"
